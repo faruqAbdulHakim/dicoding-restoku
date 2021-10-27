@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    transform: translateX(0);
+    box-shadow: none;
+    position: static;
+  }
+  nav button.touch {
+    display: none;
+  }
+  nav ul li {
+    padding: 0 20px;
+  }
+
+  .hero {
+    height: 450px;
+  }
+
+  .resto-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .resto-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
