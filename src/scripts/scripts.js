@@ -17,7 +17,6 @@ menuButton.addEventListener('click', () => {
 const truncateString = (str) => {
   return str.slice(0, 200) + '...';
 };
-
 const restoList = document.querySelector('.resto-list');
 data.restaurants.map((resto) => {
   const restoItem = document.createElement('div');

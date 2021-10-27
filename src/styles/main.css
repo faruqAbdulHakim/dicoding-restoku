@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
   font-family: Urbanist, sans-serif;
 }
 
@@ -74,6 +73,7 @@ nav button {
 }
 
 nav ul {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -82,12 +82,14 @@ nav ul {
   top: 64px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
-  transform: translateX(40vw);
-  transition: transform 0.4s ease-out;
+  transform: scale(0.1);
+  transform-origin: right top;
+  transition: all 0.2s ease-out;
 }
 
 nav ul.show {
-  transform: translateX(0);
+  transform: scale(1);
+  visibility: visible;
 }
 
 nav ul li {
@@ -145,6 +147,10 @@ main h2 {
 .resto-item:hover {
   transform: scale(1.02);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.resto-item:active {
+  transform: scale(0.99);
 }
 
 .resto-item img {
