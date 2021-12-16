@@ -17,17 +17,66 @@
     padding: 0 20px;
   }
 
-  .hero {
+  hero-section {
     height: 450px;
   }
 
   .resto-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .resto-desc {
+    font-size: 16px;
+  }
+
+  resto-detail .flex-container {
+    padding: 28px 28px 0 28px;
+    flex-direction: row;
+  }
+
+  resto-detail h3 {
+    font-size: 28px;
+  }
+
+  resto-detail img {
+    max-width: 40%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  resto-detail .resto-detail {
+    padding: 0 20px 0 24px;
+  }
+
+  .resto-menus {
+    padding: 0 24px;
+  }
+
+  .resto-reviews {
+    padding: 0 24px;
+  }
+
+  .add-review h3 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .resto-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  resto-detail img {
+    max-width: 55%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .resto-menus-categories {
+    flex-direction: row;
+  }
+
+  .resto-menus-categories > * + * {
+    margin-left: 55px;
   }
 }

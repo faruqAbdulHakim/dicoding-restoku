@@ -3,50 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RESTOKU. | Cari tempat makan terbaik untukmu</title>
+    <meta
+      name="description"
+      content="Find restaurant recommendations for you"
+    />
+    <title>RESTOKU. | Restaurant Recommendations</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="theme-color" content="#34495e" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192-whitebg.png" />
   </head>
   <body>
     <a class="skip" href="#main">SKIP TO CONTENT</a>
-
-    <!-- NavBar -->
-    <nav>
-      <h1><a href="/" class="touch">RESTOKU.</a></h1>
-      <button type="button" class="touch" aria-label="membuka menu">≡</button>
-      <ul>
-        <li><a href="/" class="touch">HOME</a></li>
-        <li><a href="#" class="touch">FAVORITE</a></li>
-        <li>
-          <a
-            href="https://github.com/faruqAbdulHakim"
-            target="_blank"
-            class="touch"
-            >ABOUT US</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Hero -->
-    <div class="hero">
-      <div>
-        <h2 tabindex="0">RESTOKU.</h2>
-        <p tabindex="0">Cari tempat makan terbaik untukmu</p>
-      </div>
-      <img
-        class="hero-img"
-        src="./images/heros/hero-image_2.jpg"
-        alt="hero image"
-        tabindex="0"
-      />
-    </div>
-
-    <!-- Daftar restorean -->
-    <main id="main">
-      <h2 tabindex="0">Daftar Restoran</h2>
-      <div class="resto-list"></div>
-    </main>
-
-    <footer tabindex="0">Copyright © 2021 - RESTOKU.</footer>
+    <app-bar></app-bar>
+    <div id="root"></div>
   </body>
 </html>

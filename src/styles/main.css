@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: Urbanist, sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -17,10 +18,7 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 button {
@@ -96,29 +94,31 @@ nav ul li {
   padding: 10px 20px;
 }
 
-/* Hero */
-.hero {
-  position: relative;
+nav ul li a:hover {
+  text-decoration: underline;
 }
-.hero div {
-  position: absolute;
+
+/* Hero */
+hero-section {
   z-index: 1;
   color: white;
   width: 100%;
-  height: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/images/heros/hero-image_2.jpg');
 }
-.hero h2 {
+hero-section h2 {
   font-size: 36px;
   margin-bottom: 16px;
 }
 .hero-img {
   filter: brightness(0.6) blur(0.6px);
   width: 100%;
-  height: 100%;
+  height: 40%;
   object-fit: cover;
   object-position: top;
 }
@@ -136,7 +136,7 @@ main h2 {
   justify-items: center;
 }
 
-.resto-item {
+resto-item {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -144,16 +144,16 @@ main h2 {
   transition: all 0.2s ease-out;
 }
 
-.resto-item:hover {
+resto-item:hover {
   transform: scale(1.02);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.resto-item:active {
+resto-item:active {
   transform: scale(0.99);
 }
 
-.resto-item img {
+resto-item img {
   width: 100%;
   height: 240px;
   border-radius: 0 0 20px 20px;
@@ -169,7 +169,6 @@ main h2 {
 }
 
 .rating {
-  margin-left: 10px;
   color: #e67e22;
   font-weight: 600;
 }
@@ -178,6 +177,165 @@ main h2 {
   margin: 10px 0;
   font-size: 14px;
   text-align: justify;
+}
+
+/* resto detail page */
+
+resto-detail .flex-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+resto-detail h3 {
+  font-size: 28px;
+}
+
+resto-detail .resto-detail {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+resto-detail .resto-detail > * + * {
+  margin-top: 16px;
+}
+
+resto-detail img {
+  border-radius: 20px;
+}
+
+.resto-menus {
+  margin-top: 24px;
+  padding: 10px;
+}
+
+.resto-menus-categories {
+  display: flex;
+  flex-direction: column;
+}
+.resto-menus-categories div {
+  margin-top: 10px;
+}
+.resto-menus-categories p {
+  font-weight: bold;
+}
+.resto-menus-categories ul li {
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.resto-reviews {
+  max-width: 500px;
+  margin-top: 24px;
+  padding: 10px;
+}
+
+.resto-reviews > * + * {
+  margin-top: 12px;
+}
+
+.resto-reviews-review {
+  padding: 10px;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow-wrap: break-word;
+}
+
+.reviewers-name {
+  font-weight: bold;
+}
+
+.reviews-date {
+  font-size: 12px;
+  color: gray;
+}
+
+.reviews-review {
+  margin-top: 5px;
+}
+
+.add-review {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.add-review form label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.add-review form label span.label-text {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.add-review form input,
+.add-review form textarea {
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+}
+
+.add-review form button {
+  margin-top: 24px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 10px 16px;
+  font-weight: bold;
+}
+.add-review form button:hover {
+  opacity: 75%;
+}
+.add-review form button:active {
+  opacity: 40%;
+}
+
+.favorite-button {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  color:white;
+  background-color: #34495e;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.favorite-button:hover {
+  transform: scale(1.2);
+}
+.favorite-button:active {
+  transform: scale(0.95);
+}
+
+/* Content-Loading */
+content-loading {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 1s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 /* Footer */
