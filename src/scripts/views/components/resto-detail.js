@@ -49,15 +49,15 @@ class RestoDetail extends HTMLElement {
         <h3 tabindex="0">Menus</h3>
         <div class="resto-menus-categories">
           <div>
-            <p>Foods</p>
+            <p tabindex="0">Foods</p>
             <ul>
-            ${menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
+            ${menus.foods.map((food) => `<li tabindex="0">${food.name}</li>`).join('')}
             </ul>
           </div>
           <div>
-            <p>Drinks</p>
+            <p tabindex="0">Drinks</p>
             <ul>
-            ${menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
+            ${menus.drinks.map((drink) => `<li tabindex="0">${drink.name}</li>`).join('')}
             </ul>
           </div>
         </div>
@@ -66,9 +66,9 @@ class RestoDetail extends HTMLElement {
         <h3 tabindex="0">Reviews</h3>
         ${customerReviews.map((review) => `
           <div class="resto-reviews-review">
-            <p class="reviewers-name">${review.name}</p>
-            <p class="reviews-date">${review.date}</p>
-            <p class="reviews-review">${review.review}</p>
+            <p class="reviewers-name" tabindex="0">${review.name}</p>
+            <p class="reviews-date" tabindex="0">${review.date}</p>
+            <p class="reviews-review" tabindex="0">${review.review}</p>
           </div>
         `).join('')}
       </div>

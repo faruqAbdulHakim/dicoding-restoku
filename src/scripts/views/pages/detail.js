@@ -6,7 +6,7 @@ import { createRestoDetail } from '../template/template-creator';
 const Detail = {
   async render() {
     return `
-    <main id="main">
+    <main id="main" tabindex="0">
       <content-loading></content-loading>
       <button id="favorite-button" class="favorite-button"></button>
     </main>

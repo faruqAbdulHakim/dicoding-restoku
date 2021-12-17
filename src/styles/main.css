@@ -41,6 +41,7 @@ ul {
 
 /* Skip to content */
 a.skip {
+  padding: 22px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -284,6 +285,8 @@ resto-detail img {
   background-color: #34495e;
   color: #ecf0f1;
   padding: 10px 16px;
+  min-height: 44px;
+  min-width: 44px;
   font-weight: bold;
 }
 .add-review form button:hover {
@@ -305,7 +308,7 @@ resto-detail img {
   width: 44px;
   color:white;
   background-color: #34495e;
-  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
 }
 

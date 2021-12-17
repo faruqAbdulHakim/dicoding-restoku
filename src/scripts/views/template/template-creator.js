@@ -12,7 +12,7 @@ const createRestoDetail = (restaurant) => {
 
 const createFavoriteButton = () => `
   <svg
-    aria-hidden="true"
+    aria-label="add to favorite"
     focusable="false"
     data-prefix="far"
     data-icon="heart"
@@ -30,7 +30,7 @@ const createFavoriteButton = () => `
 
 const createFillFavoriteButton = () => `
   <svg
-    aria-hidden="true"
+    aria-label="remove from favorite"
     focusable="false"
     data-prefix="fas"
     data-icon="heart"

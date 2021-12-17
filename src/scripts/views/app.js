@@ -23,6 +23,11 @@ class App {
     const page = Routes[routePath];
     this.root.innerHTML = await page.render();
     await page.afterRender();
+    const skipToMainLink = document.querySelector('a.skip');
+    skipToMainLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#main').focus();
+    });
   }
 }
 
