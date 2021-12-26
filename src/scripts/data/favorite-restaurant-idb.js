@@ -14,12 +14,17 @@ const FavoriteRestaurantIDB = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
 
+  // eslint-disable-next-line consistent-return
   async getFavoriteRestaurantById(id) {
-    return (await dbPromise).get(OBJECT_STORE_NAME, id);
+    if (id) return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
 
+  // eslint-disable-next-line consistent-return
   async putFavoriteRestaurant(restaurant) {
-    return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
+    // eslint-disable-next-line no-prototype-builtins
+    if (restaurant.hasOwnProperty('id')) {
+      return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
+    }
   },
 
   async deleteFavoriteRestaurantById(id) {

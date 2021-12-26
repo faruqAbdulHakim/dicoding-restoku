@@ -11,6 +11,9 @@ import './views/components/content-loading';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 const app = new App({
   button: document.querySelector('nav button'),
   drawer: document.querySelector('nav ul'),
