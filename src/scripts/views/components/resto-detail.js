@@ -23,7 +23,7 @@ class RestoDetail extends HTMLElement {
 
     this.innerHTML = `
     <div class="flex-container">
-      <img class="lazyload" src="${API_ENDPOINT.MEDIUM_PICTURE(pictureId)}" alt="${name}" tabindex="0"/>
+      <img class="lazyload" data-src="${API_ENDPOINT.MEDIUM_PICTURE(pictureId)}" alt="${name}" tabindex="0"/>
       <div class="resto-detail">
         <h3 tabindex="0">${name}</h3>
         <div tabindex="0">

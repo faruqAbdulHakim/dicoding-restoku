@@ -18,7 +18,7 @@ class RestoItem extends HTMLElement {
 
     this.innerHTML = `
     <a href="/#/detail/${id}">
-      <img class="lazyload" src="${API_ENDPOINT.SMALL_PICTURE(pictureId)}" alt="${name}" tabindex="0"/>
+      <img class="lazyload" data-src="${API_ENDPOINT.SMALL_PICTURE(pictureId)}" alt="${name}" tabindex="0"/>
       <div class="resto-info">
         <h3 tabindex="0">${name} </h3>
         <p>
